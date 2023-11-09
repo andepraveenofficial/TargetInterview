@@ -1,0 +1,40 @@
+Insta Share
+------------
+This is Insta Share Application.
+It almost like Instagram Clone.
+I created this entire project with React.
+I have spent 7 days for completing this project.
+
+For this project I used 
+* Functional Components with React Hooks.
+* Global State management purpose I used React context for Avoiding Prop Drilling.
+* I used js-cookies third party package for store the jwt_token in Cookies Storage of Browser.
+* In this application, I created Rich UI components with Figma Design.
+-----------------------
+If you want to access this entire website we must give correct credentials otherwise it throws errors.
+----------------------
+With correct credentials, It automatically redirected to the Home Page.
+
+Top section -> Navbar
+Stories Section -> Sliding Motion -> React Slink -> Third party Package.
+Posts Section
+---------------------
+search Box -> we can search with post caption
+Home
+profile
+-----------
+Every API has three views
+
+LoadingView
+SuccessView
+FailureView
+------------
+Desktop view 
+Mobile View
+----------------------
+Night Mode 
+-------------------
+Logout
+======================
+
+

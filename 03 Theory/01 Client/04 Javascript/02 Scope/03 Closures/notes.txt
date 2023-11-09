@@ -1,0 +1,19 @@
+1) What is closure in Javascript?
+A function along with reference to its outer environment that together forms a Closure.
+Closure is a combination of a function and its lexical scope bundle together forms a Closure.
+Each and Every function in Javascript has access to its outer Lexical Environment that means use the varaibles and functions of its parent environment.
+if function execute in other environment that remember its lexical environment also.
+--------------------
+2) Advantages of Closure
+A) Closure is most beautiful part of the javascript.
+   hidden variables
+----------------------------
+3) Disadvantages of Closure?
+A) over consumption of memory.
+It consumes lot of memory.
+------------------------------
+4) Garbage Collector?
+A) Garbage collector is like program in the browser of the javascript engine,
+It freez the un-utilized memory.
+Garbage collector is do where the unused variables takes out of the memory.
+=====================

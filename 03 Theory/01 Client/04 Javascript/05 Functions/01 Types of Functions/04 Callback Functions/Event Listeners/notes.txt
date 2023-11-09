@@ -1,0 +1,8 @@
+Event Listener:
+when the event listened, browser will push the the callback function into the callstack.
+-----------------------
+Garbage Collector:
+
+Event Listeners takes heavy memory.
+Garbage is working here.
+==========================
