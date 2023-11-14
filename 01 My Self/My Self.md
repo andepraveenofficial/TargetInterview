@@ -21,7 +21,7 @@ I have completed my B.Tech in the stream of **Mechanical Engineering** from *SRI
 ##### `My Journey`
 After My Graduation, I worked at __JAY ENGINEERING WORKS__ company in Chennai as a Quality Control Engineer & CNC Programmer.  
 
-I have a strong interest in learning programming languages, so I completed an Industry Ready Certification course in Full-stack Development with MERN specialization from Nxtwave.  
+I have a strong interest in learning programming languages, so I completed an __Industry Ready Certification__ course in Full-stack Development with __MERN__ specialization from __Nxtwave__.  
 
 ##### `Skills`
 
@@ -40,9 +40,9 @@ So I have hands-on experience on MERN stack technologies,
 ##### `Projects`
 
 During my fullstack training I have built many  __static__, __Responsive__ and __Dynamic__ websites.  
-I developed __todo Application__ with Javascript and also created __wikipedia search Application__ using Javascript and API calls.
+I developed __Todo Application__ with Javascript and also created __Wikipedia Search Application__ using `Javascript` and `API calls`.
 
-I have built __Instashare__ React Application, It is almost like Instagram clone. For this project I used Functional components with React Hooks, API calls and Cookies Storage.
+I have built __Instashare__ React Application, It is almost like Instagram clone. For this project I used `Functional components with React Hooks`, `API calls` and `Cookies Storage`.
 
 currently I am learning `MongoDB` database...
 
@@ -51,7 +51,7 @@ My achievement is that I recently participated in 100-days code challenge and su
 
 During that challenge, I consistently updated my learning progress of coding every day for 100 days on __LinkedIn__.
 
-So I received a certificate from __Nxtwave__.
+As a result,  I received a certificate from __Nxtwave__.
 
 This is all about me sir.
 
@@ -130,21 +130,7 @@ I'm confident that with my strengths, I can fulfill my responsibilities as an em
 <summary>Weakness</summary>
 
 ### Weakness 
-Rarely, I get sad sometimes when my plans don't work. 
-
-</details>
-
----
-
-<details>
-<summary>Achievements</summary>
-
-### Achievements
-Recently I participated in 100-days code challenge and I completed successfully that challenge.
-
-In that challenge, I updated my learning progress of coding consistently every day for 100 days in __LinkedIn__.
-
-So I got cerificate from __Nxtwave__.
+I get sad sometimes when my plans don't work. 
 
 </details>
 

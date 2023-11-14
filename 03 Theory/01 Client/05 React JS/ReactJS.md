@@ -822,6 +822,7 @@ React Hooks helps to lifecycle methods, context and other react features in the 
   * Memory    
      - useMemo
      - useCallback
+     - memo
   * Reference    
      - useReference 
   * Own Hooks

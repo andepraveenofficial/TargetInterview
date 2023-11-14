@@ -6,7 +6,6 @@ for row_count in range(rows):
     matrix.append(add_row)
     
 
-
 rotate_matrix = []
 for column_index in range(columns):
     add_row  = []
