@@ -51,7 +51,7 @@ __React JS__ is an open-source JavaScript library. It was developed by Facebook.
  * Virtual DOM
 
   ##### React Version
-  react@17.0.0
+  `react@18.2.0`
 
   ##### React Components
   In __React JS__, there are 2 components
@@ -59,8 +59,8 @@ __React JS__ is an open-source JavaScript library. It was developed by Facebook.
   * Functional Component
 
 ##### React with CDN Links
-
 CDN : Content Delivery Network
+
 ###### React Element
 `React.createElement()` 
 
@@ -107,17 +107,26 @@ CDN : Content Delivery Network
 <details>
 <summary>Create App</summary>
 
-### Create App
+### Create React Application
+Creating a real-world application involves lot of setup because a large number of components need to be organised. 
 
-##### __npx__ 
-Creating a real-world application involves lot of setup because a large number of components need to be organised.  
-`npx create-react-app my-app` to generate a ready-made React application setup.
+1. Install `Node.js` from the official website. 
 
-```BASH
-npx create-react-app my-app
-cd my-app
-npm start
-```
+2. Install Create React App globally
+    * `npm install -g create-react-app`
+
+3. Create a new React project
+    * `npx create-react-app myapp`
+    * It generates a ready-made React application setup.
+
+4. Navigate to the project folder
+    * `cd myapp`
+
+5. Start the development server 
+    * `npm start`
+
+6. Now you can work on your React assignment
+
 </details>
 
 ---
@@ -241,6 +250,8 @@ const Welcome = () => <h1 className="message">Hello, User</h1>;
 * The component name should always be in the pascal case.
 * Class Component we can call as stateful Component.
  * A class component requires you to extend from React `Component` and create a `render` method that returns a JSX element.
+
+
 ```Javascript
 import { Component } from "react";
 
@@ -253,6 +264,52 @@ class App extends Component {
     return <div>App Component</div>;
   }
 }
+```
+
+
+```Javascript
+/* -----> Third Party Packages <----- */
+import React, { Component } from "react";
+
+/* -----> Class Component <----- */
+class App extends Component {
+  // Initialization
+  constructor(props) {
+    super(props);
+    this.state = { name: "Ande Praveen" };
+  }
+
+  // Methods
+  apiCall = () => {
+    console.log("apiCall Method");
+  };
+
+  deleteApiCall = () => {
+    console.log("deleteApiCall Method");
+  };
+
+  // Mounting
+  componentDidMount() {
+    this.apiCall();
+    console.log("App Component Mounted");
+  }
+
+  // UnMounting
+  componentWillUnmount() {
+    this.deleteApiCall();
+console.log("App Component Unmounted");
+  }
+
+  // Updating
+  render() {
+    // Return JSX
+    return <div>App Component</div>;
+  }
+}
+
+/* -----> Default Export <----- */
+export default App;
+
 ```
 
 ##### __extends__ keyword
@@ -280,12 +337,12 @@ this.state = {key:"value"}
 }
 ```
 2. __render()__
-   - `render()` method is used to return the JSX that is displayed in the UI.
+   - The `render()` method is used to return the JSX that is displayed in the UI.
    - If more than one HTML element is to be rendered, then they must be grouped using a container element or react fragment.
-   - `render()` is called whenever the state is updated using `setState` method.
+   - The `render()` is called whenever the state is updated using `setState` method.
 
 3. __componentDidMount()__
-The `componentDidMount()` method is used to do operations on the components after the initial render that means the component already placed in the DOM.  
+The `componentDidMount()` method is used to do operations on the component after the initial render that means the component already placed in the DOM.  
 In General we make __API__ Calls inside `componentDidMount()` so that it doesn't block render().
 __Example__: Setting timers, initiating API calls, ...etc.
 
@@ -385,7 +442,7 @@ export default App;
 * State is used to store the component's data that changes over time.
 * We can update state 
   - `setState` method in class Component
-  - `useState` hook in Functional Component
+  - `const[name, setName] = useState` hook in Functional Component
 * when the state changes, automatically the component re-renders.
 * If we try to update the state directly then it won't re-render the component.
 * state should be immutable
@@ -427,12 +484,13 @@ this.setState({key1:value1}, callback)
 <summary>props</summary>
 
 ### props
-* Props stands for Properties.
+* `Props` stands for __Properties__.
 * We can pass information from __Parent Component__ to __Children Component__ by using props.
 * we can pass information throung attributes.
 * The children component accept props as parameters and can be accessed directly.
 * Child Component can't change the props.
 * props are immutable. A component cannot change the props.
+* props are read-only.
 
 
 ##### Parent Component
@@ -489,9 +547,6 @@ export default App;
 
 ```
 
-##### Composable Component
-We can include a component inside another component.
-
 ##### Child Component
 ```Javascript 
 const Child = (props) => {
@@ -510,12 +565,14 @@ return (
 export default Child;
 ```
 
+##### Composable Component
+We can include a component inside another component.
 
 ##### key prop in list items
 Keys help React identify which items have changed, are added or are removed. Keys should be given to the elements inside the array to give the elements a stable identity.
 
 ##### children prop
-Children is a prop that allow you to pass components as data to other components. Component tree put between component's opening and closing tag will be passed to that component as children prop.  
+`Children` is a prop that allow you to pass components as data to other components. Component tree put between component's __opening__ and __closing__ tag will be passed to that component as children prop.  
 The best way to pick a key is to use a string that uniquely identifies a list item among its siblings.
 Most often, we would use IDs (uniqueNo) from our data as keys.
 
@@ -561,7 +618,7 @@ They are:
 * __location__: The location object contains the information about the current URL.
 
 ##### defaultProps
-defaultProps is a property in React Component used to set default values for the props.
+`defaultProps` is a property in React Component used to set default values for the props.
 This is similar to adding default parameters to the function.
 
 ```Javascript 
@@ -621,21 +678,21 @@ export default Welcome;
    - Redirect
    
 ##### BrowserRouter
- To add routing wrapping all the components with BrowserRouter.
+ To add routing wrapping all the components with `BrowserRouter`.
 
 ##### Switch 
- The Switch Component will only render's the first route that matches the path. If no path matches, it renders the NotFound component.
+ The `Switch` Component will only render's the first route that matches the path. If no path matches, it renders the NotFound component.
 
  ##### Route
- * The Route Component renders specific UI component when path matches current URL.  
+ * The `Route` Component renders specific UI component when path matches current URL.  
  * exact keyword renders the route if path matches exactly the current url.
 
 ##### Link
-The Link Component creates hyperlinks that allows to navigate around in application.  
+The `Link` Component creates hyperlinks that allows to navigate around in application.  
 The `to` prop specifies absolute path.
 
 ##### Redirect
-Redirect Component is used to redirect to another path
+Redirect Component is used to redirect to another path.
 
 ##### withRouter 
 To provide __Routing default properties__ prop to other components, we can wrap it with the withRouter function while exporting it.
@@ -733,6 +790,8 @@ export default ProtectedRoute;
 
 ### React Context
 React Context is a mechanism to avoid prop drilling.
+
+We can handle the Global State Management with React Context.
 
 Prop Drilling means passing data from one Component to another Component that does not need the data but only helps in passing it through the tree.
 
@@ -886,7 +945,7 @@ export default Card
 ```
 
 ##### __useReducer()__
-Add state to Function Component. Handling complex state.
+Add state to Functional Component. we can handle the complex state.
 
 ```Javascript 
 const [currentState, dispatch] = useReducer(reducerFunction, initialState)
@@ -1093,6 +1152,8 @@ export default App;
 * useMemo(fn, []) => It executes fn() and returns the value when [] changes.
 * useCallback(fn, []) => It returns fn when [] changes
 
+The useCallback hook in React is used to memoize functions, which means it memoizes the function instance so that it does not get recreated on every render unless its dependencies change.
+
 
 ```Javascript 
 import React, { useState, useCallback } from 'react';
@@ -1123,6 +1184,31 @@ export default App;
 
 ```
 
+##### memo
+The `memo` function is used for memoizing functional components to prevent unnecessary renders. It's particularly useful when your functional component renders often with the same props, and you want to avoid re-rendering when the props.
+
+```Javascript 
+import React, { useState, memo } from 'react';
+
+const App = () => {
+  const [count, setCount] = useState(0);
+
+  const handleIncrement = () => {
+    setCount(count + 1);
+  };
+
+  return (
+    <div>
+      <h1>My App</h1>
+      <p>Count: {count}</p>
+      <button onClick={handleIncrement}>Increment</button>
+    </div>
+  );
+}
+
+export default memo(App);
+
+```
 
 ##### Custom Hook
 we can create own hooks.
@@ -1233,6 +1319,7 @@ export default App;
 
 ### Redux
 Redux is used to manage Global State management.
+
 1. store
 2. reducer
 3. dispatch
@@ -1433,7 +1520,6 @@ we can style the React Component by using:
 * Bootstrap
 * Styled Components (Third Party Packages)
 
-
 ##### Styled Components
 Styled Components are one of the new ways to use CSS in modern React. These are used to reuse styles.
 
@@ -1486,7 +1572,7 @@ We can write a React component without using JSX.
 anything you can do with JSX can also be done with JavaScript also.
 
 ##### Babel
-* Babel Javascript code compiler.
+* Babel is a Javascript code compiler.
 * Babel converts JSX into regular JavaScript.
 
 ##### React Fragment
@@ -1504,10 +1590,10 @@ export default Welcome;
 ```
 
 ##### __controlled__ and __uncontrolled__
-* Controlled Input :  
+* __Controlled Input__ :  
   - If the Input Element value is handled by a React State then it is called Controlled Input
 
-* Uncontrolled Input :  
+* __Uncontrolled Input__ :  
   - If the Input Element value is handled by the browser itself then it is called Uncontrolled Input.
   - Its value can only be set by a user, but not programmatically.
 
