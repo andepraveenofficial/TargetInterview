@@ -1,5 +1,15 @@
 # My Self
 
+* Self Introduction
+* Work Experience
+* Career Switch
+* Strengths
+* Hire
+* Weekness
+* Feature Goals
+* Hobbies
+* Family
+
 ---
 
 <details>

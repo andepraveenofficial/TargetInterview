@@ -234,7 +234,7 @@ print("Sum: " + str(result))  # Sum: 5
   - Examples: `str`, `int`, `float`, `tuple`	
   
 * Mutable Data Types
-   - values Can be modified after creation.
+   - values Can be modified after creation also.
    - Examples: `list`, `set`, `dict`
 
 ##### Types of Variables
@@ -943,7 +943,7 @@ print(result)  # 120
 ```
 
 ##### Lambda function 
-A __lambda__ function an anonymous function used for doing simple operations. __Lambda__ functions can have any number of arguments, but can only have one expression.
+A `lambda` function an anonymous function used for doing simple operations. __Lambda__ functions can have any number of arguments, but can only have one expression.
 
 The expression is executed and returned when the lambda function is called.
 `lambda arguments: expression`
@@ -1233,6 +1233,8 @@ remove is a method that is used to remove the first occurrence of a specified va
 ```Python 
 list = [1, 2, 3, 2]
 list.remove(2)
+
+print(list) # [1,3,2]
 ```
 
 ##### del 
@@ -1398,7 +1400,7 @@ print(set_a)  # {'b', 'a', 'c'}  # set removes the duplicates
 unordered collections of items
 every set element is unique.
 every set element must be immutable.
-As list is mutable, Set cannot have list as an item.
+As `list` is mutable, Set cannot have list as an item.
 set contains unique elements.
 """
 
@@ -1645,11 +1647,15 @@ print("-------disjoint--------")
 # set_1.isdisjoint(set_2)
 # It returns True when no common elements, else False.
 
-set_1 = {1, 2, 3, 4, }
+set_1 = {1, 2, 3, 4}
 set_2 = {5, 6, 7, 8}
 is_disjoint = set_2.isdisjoint(set_1)
 print(is_disjoint)  # True
 
+set_1 = {1, 2, 3, 4, 5}
+set_2 = {5, 6, 7, 8}
+is_disjoint = set_2.isdisjoint(set_1)
+print(is_disjoint)  # False
 
 print("=================")
 
@@ -1967,7 +1973,7 @@ The Conditional Statement allows you to execute a block of code based on a condi
       print("Yes, His age is below 30 years")  # Yes, His age is below 30 years
    ```
 * __if-else__
-   - When `If-Else` conditional statement is used, the Else block of code executes if the `if` condition is False.
+   - When `If-Else` conditional statement is used, the Else block of code executes if the `if` condition is `False`.
    ![if-else statement](./Assets/02_Conditional_Statements/if-else.jpg)  
 
    ```Python 
@@ -1986,6 +1992,7 @@ The Conditional Statement allows you to execute a block of code based on a condi
 
 * __if-elif-else__
    - Incase `if` condition is not satisfy then `elif` condition will be checked. 
+    
    - ![elif](./Assets/02_Conditional_Statements/if-elif-else.PNG)
 
 ```Python 
@@ -2243,8 +2250,7 @@ print(a)  # 10
 """
 unique id
 
-Identity of an object
-address
+Identity of an object address
 this unique id can be different for each time you run the program.
 """
 
@@ -2344,7 +2350,7 @@ print(sum_of_numbers)  # 15
 # Acending Order
 
 """
-sorted function returns a new sequence with all the items in incremental order.
+sorted function returns a new sequence with all the items in incremental order (Ascending Order).
 sorted(sequence)
 """
 
@@ -2416,7 +2422,7 @@ print(is_all_true)  # True
 ```
 
 ##### any()
-The `any()` function returns True if any of the items in the sequence is true. Otherwise, it returns `False`.
+The `any()` function returns True if any of the items in the sequence is `True`. Otherwise, it returns `False`.
 
 ```Python 
 list_a = [True, False]
@@ -2495,13 +2501,13 @@ print("98" < "984")  # True
 <summary>OOPS</summary>
 
 ### OOPS
-`OOPs : Object-Oriented Program`
+`OOPs : Object-Oriented Program`  
 Object-Oriented Programming is a way of approaching, designing and developing software.
 Proper usage of OOPs concepts helps us build well-organized systems that are easy to use and extend.
 
 ##### The advantages of OOPs
 * Easier way to analyse
-* Reusability of code through inheritance
+* Reusability of code through __inheritance__
 * Effective problem solving
 
 ##### principles of OOPs
@@ -2551,8 +2557,8 @@ The bundling of related attributes and methods together is called Encapsulation.
 Classes can be used to bundle related attributes and methods.
 
 * Public Member: Accessible anywhere from outside class.
-* Private Member: Accessible within the class
 * Protected Member: Accessible within the class and its sub-classes
+* Private Member: Accessible within the class
 ![Encapsulation](./Assets/05_OPPs/encapsulation.jpg)
 
 ```Python 
@@ -2649,13 +2655,13 @@ print(animal_sound(cat))  # Calls Cat's make_sound method
 ```
 
 ##### Abstraction 
-In python is defined as a process of handling complexity by hiding unnecessary information from the user. This is one of the core concepts of object-oriented programming (OOP) languages.  
+In python, Abstraction is defined as a process of handling complexity by hiding unnecessary information from the user. This is one of the core concepts of object-oriented programming (OOP) languages.  
 
 For example :  When we use the TV remote to increase the volume. We don't know how pressing a key increases the volume of the TV.
 
 ##### Classes
 A class is a prototype from which objects are created. Classes can be used to bundle related attributes and methods. An instance of a class is an Object.  
-A class in Python is defined using the class keyword, followed by the class name and a colon. Inside the class, attributes and methods can be defined to represent properties and behaviors of the class.
+A class in Python is defined using the `class` keyword, followed by the class name and a colon. Inside the class, attributes and methods can be defined to represent properties and behaviors of the class.
 
 ```Python 
 class Mobile:
@@ -2720,7 +2726,7 @@ In the above example, the model and camera attributes are initialized with the v
 
 
 ##### self
-In Python, the `self` is the first parameter of methods that represents the instance of the class. Therefore, to call attributes and methods of a class, the programmer need to use self within the class.
+In Python, the `self` is the first parameter of methods that represents the instance of the class. Therefore, to call attributes and methods of a class, the programmer need to use `self` within the class.
 
 self is not a keyword and has no special meaning in Python. Writing this parameter as self is a convention. We can use other names but it is highly discouraged.
 
@@ -2967,8 +2973,8 @@ print("----reduce-------")
 from functools import reduce
 
 
-def sum_of_numbers(a, b):
-    return a + b
+def sum_of_numbers(acc, curr):
+    return acc + curr
 
 
 my_list = [1, 2, 3, 4, 5, 6]

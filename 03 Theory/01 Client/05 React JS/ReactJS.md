@@ -28,6 +28,7 @@
 * Third Party Packages
 * Debugging
 * Important Concepts
+* Pure Component
 </details>
 
 ---
@@ -1756,6 +1757,90 @@ export default App
 
 `output : count is 3`
 
+</details>
+
+---
+
+<details>
+<summary> Pure Component </summary>
+
+##### Pure Function
+In Javascript, when functions returns same output when same input is passed is called Pure functions. It is like returning same data for same input. So in pure function output only depend on its input arguments. Pure functions does not produced any side effects as well.
+
+```javascript
+function Add(num1, num2){
+  return num1 + num2;
+}
+
+let output = Add(1,2);
+console.log(output);  // 3
+```
+
+##### Pure Component
+We know that in React we can create a component in two different ways i.e one is Class component/ Stateful component and another is Functional component/Stateless component. A React component can be considered pure if it renders the same output for the same state and props.
+
+We can convert component to pure component as below:
+
+* For __class components__ react provides `React.PureComponent` base class.
+* For __Functional component__ react provides `React.memo` HOC (Higher Order Component).
+
+##### React.PureComponent
+Now, by extending `PureComponent` instead of `Component`, this class benefits from the default shouldComponentUpdate method provided by PureComponent, which performs a shallow comparison of __props__ and __state__ to determine if a re-render is necessary. In this specific example, since the name state doesn't change during the changeName method, the PureClassComponent won't re-render unnecessarily.
+
+```javascript
+import React, { PureComponent } from "react";
+
+class PureClassComponent extends PureComponent {
+  constructor() {
+    super();
+    this.state = {
+      name: "React JS"
+    };
+  }
+
+  changeName = () => {
+    this.setState({ name: "React JS" });
+  };
+
+  render() {
+    console.log("PureClassComponent -- Render method called");
+    return (
+      <div>
+        <p> Name is : {this.state.name} </p>
+        <button onClick={this.changeName}>Change Name</button>
+      </div>
+    );
+  }
+}
+
+export default PureClassComponent;
+
+```
+
+
+
+##### React.memo
+`React.memo` is nothing but a Higher Order function (HOC). `React.memo` is similar to React.PureComponent and it is for functional component instead of class component. You can wrap your functional component when component renders same output with same props passed. Due to this it will improve the performance and optimize the rendering.
+
+`React.memo` only works when props of components changes. It means that if you are using state using useState hook in functional then for every state change it will render the component. Similar to `React.PureComponent` it is doing shallow comparison of props.
+
+`React.memo` takes a first argument as component and returns a special kind of React component.
+
+```Javascript 
+import React, {memo} from "react";
+
+const CustomLabel=({ name }) => {
+  return (
+    <>
+      {console.log("CustomLabel component render")}
+      <label>
+        <b>{name}</b>
+      </label>
+    </>
+  );
+};
+export default memo(CustomLabel);
+```
 </details>
 
 ---
