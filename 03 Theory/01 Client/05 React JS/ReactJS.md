@@ -19,6 +19,7 @@
 * Routing
 * React Context
 * React Hooks
+* Pure Component
 * Redux
 * Component Styles
 * General
@@ -28,7 +29,7 @@
 * Third Party Packages
 * Debugging
 * Important Concepts
-* Pure Component
+
 </details>
 
 ---
@@ -41,7 +42,7 @@
 ##### React JS
 __React JS__ is an open-source JavaScript library. It was developed by Facebook.  
    * ReactJS is used to building __user interfaces__.  
-   * we can create __Single Page Applications (SPA)__ by using ReactJS .
+   * we can create __Single Page Applications (SPA)__ by using ReactJS.
    * React allows us to create __reusable components__. 
 
  ##### Advantages of ReactJS
@@ -60,7 +61,7 @@ __React JS__ is an open-source JavaScript library. It was developed by Facebook.
   * Functional Component
 
 ##### React with CDN Links
-CDN : Content Delivery Network
+**CDN** : Content Delivery Network
 
 ###### React Element
 `React.createElement()` 
@@ -126,7 +127,7 @@ Creating a real-world application involves lot of setup because a large number o
 5. Start the development server 
     * `npm start`
 
-6. Now you can work on your React assignment
+6. Now you can work on your React Project
 
 </details>
 
@@ -136,7 +137,7 @@ Creating a real-world application involves lot of setup because a large number o
 <summary>Component Life Cycle</summary>
 
 ### Component Life Cycle
-It is a different stages of the Component during its existence.
+__Component Life Cycle__ is a different stages of the Component during its existence.
 * Mounting
 * Updating
 * Unmounting
@@ -159,7 +160,7 @@ In Unmounting phase, the component instance is removed from the DOM.
 
 ### DOM
 __DOM__ stands for __Document Object Model__ .  
-* The DOM is __UI__ of your application.
+* The DOM is __UI__ of our application.
 * It is the structured representation of the HTML document created by the browser. 
 * It allows JavaScript to manipulate, structure, and style of your website.
 
@@ -204,11 +205,9 @@ __HTML DOM__ is called __Real DOM__.
 
 * Unidirectional data flow means a __one-way__ data flow where the data has only one way to be passed to all the child components.
 
-It means only one component can maintain and update the state. The state is passed to the child components through props.
+It means only one component can maintain and update the `state`. The state is passed to the child components through props.
 
 When we want to update the state by the event triggered in the child component, we can't directly change the props in child components as props are read-only.
-
-Thus, the state only gets updated in the parent component as props are read-only. The state is passed to all the child components through the props.
 
 Some of the advantages of Unidirectional data flow are:
 
@@ -231,8 +230,8 @@ A Component is a JS function that returns a JSX element.
 const Welcome = () => <h1 className="message">Hello, User</h1>;
 ```
 
-* If function name starts with Capital letter then only react treats as Component otherwise react treats as HTML Element.
-* We can call the function ( Component ) with self-closing tags `<Welcome />`.
+* If a function name starts with Capital letter then only react treats as Component otherwise react treats as HTML Element.
+* We can call the Component with self-closing tags `<Welcome />`.
 
 ##### Types of Components in __React JS__
 
@@ -247,10 +246,10 @@ const Welcome = () => <h1 className="message">Hello, User</h1>;
 <summary>Class Component</summary>
 
 ### Class Component
-* If function name starts with Capital letter then only react treats as Component otherwise react treats as HTML Element.
+* If class name starts with Capital letter then only react treats as Component otherwise react treats as HTML Element.
 * The component name should always be in the pascal case.
 * Class Component we can call as stateful Component.
- * A class component requires you to extend from React `Component` and create a `render` method that returns a JSX element.
+* A class component requires you to extend from React `Component` and create a `render` method that returns a JSX element.
 
 
 ```Javascript
@@ -303,6 +302,8 @@ console.log("App Component Unmounted");
 
   // Updating
   render() {
+    console.log("render method")
+
     // Return JSX
     return <div>App Component</div>;
   }
@@ -469,6 +470,7 @@ When the state object changes, the component re-renders.
 		// updating state
         this.setState( {count:0})  // Object as an argument
     }
+
 ```
 
 ##### setState() callback function
@@ -486,9 +488,9 @@ this.setState({key1:value1}, callback)
 
 ### props
 * `Props` stands for __Properties__.
-* We can pass information from __Parent Component__ to __Children Component__ by using props.
+* We can pass information from __Parent Component__ to __Child Component__ by using props.
 * we can pass information throung attributes.
-* The children component accept props as parameters and can be accessed directly.
+* The child component accept props as parameters and can be accessed directly.
 * Child Component can't change the props.
 * props are immutable. A component cannot change the props.
 * props are read-only.
@@ -540,7 +542,6 @@ const App = () => (
     <Child greeting="Hello" name="Praveen Ande"/>
     <Child greeting="Hello" name="Brenden Eich"/>
 </div>
- 
 )
 
 // Default Export 
@@ -573,7 +574,7 @@ We can include a component inside another component.
 Keys help React identify which items have changed, are added or are removed. Keys should be given to the elements inside the array to give the elements a stable identity.
 
 ##### children prop
-`Children` is a prop that allow you to pass components as data to other components. Component tree put between component's __opening__ and __closing__ tag will be passed to that component as children prop.  
+`Children` is a prop that allow you to pass components as data to other components. The data between component's __opening__ and __closing__ tag will be passed to other component as children prop.  
 The best way to pick a key is to use a string that uniquely identifies a list item among its siblings.
 Most often, we would use IDs (uniqueNo) from our data as keys.
 
@@ -613,7 +614,7 @@ Prop Drilling is a process in which Props are passed from one Component to anoth
 ##### Default Properties
 When a component is rendered through the __route__, some of the additional props are passed.
 
-They are:
+**They are**:
 * __match__: The match object contains the information about the path from which the component is rendered.
 * __history__: The history object has some methods to control the navigation in the browser. It also maintains the history of the routes we navigated. Some of the methods to control the navigation are history.push, history.replace, etc.
 * __location__: The location object contains the information about the current URL.
@@ -668,7 +669,7 @@ export default Welcome;
 
 * It enables users to move between different parts of the application without the need of a full page reload. `react-router-dom` is a popular library used for implementing routing in React applications.
 
-* In React, we build single-page applications using __React Router__.
+* In React, we can build single-page applications using __React Router__.
 
 * To implement __routing__, React Router provides various components.
    - BrowserRouter
@@ -679,7 +680,7 @@ export default Welcome;
    - Redirect
    
 ##### BrowserRouter
- To add routing wrapping all the components with `BrowserRouter`.
+ To add routing, wrapping all the components with `BrowserRouter`.
 
 ##### Switch 
  The `Switch` Component will only render's the first route that matches the path. If no path matches, it renders the NotFound component.
@@ -1186,7 +1187,8 @@ export default App;
 ```
 
 ##### memo
-The `memo` function is used for memoizing functional components to prevent unnecessary renders. It's particularly useful when your functional component renders often with the same props, and you want to avoid re-rendering when the props.
+The `memo` function is used for memoizing functional components to prevent unnecessary renders. It's particularly useful when your functional component renders often with the same props, and you want to avoid re-rendering when the same props.  
+React will memoize the component and only re-render it if the props or state change.
 
 ```Javascript 
 import React, { useState, memo } from 'react';
@@ -1212,7 +1214,7 @@ export default memo(App);
 ```
 
 ##### Custom Hook
-we can create own hooks.
+we can create own hooks.  
 we should mention `use` word before custom hook for identify a custom hook.
 
 ```Javascript 
@@ -1311,6 +1313,92 @@ export default App;
 
 ```
 
+</details>
+
+---
+
+<details>
+<summary> Pure Component </summary>
+
+##### Pure Function
+In Javascript, when functions returns same output when same input is passed is called Pure functions. It is like returning same data for same input. So in pure function output only depend on its input arguments. Pure functions does not produced any side effects as well.
+
+```javascript
+function Add(num1, num2){
+  return num1 + num2;
+}
+
+let output = Add(1,2);
+console.log(output);  // 3
+```
+
+##### Pure Component
+We know that in React we can create a component in two different ways i.e one is Class component/ Stateful component and another is Functional component/Stateless component. A React component can be considered pure if it renders the same output for the same state and props.
+
+We can convert component to pure component as below:
+
+* For __class components__ react provides `React.PureComponent` base class.
+* For __Functional component__ react provides `React.memo` HOC (Higher Order Component).
+
+##### React.PureComponent
+Now, by extending `PureComponent` instead of `Component`, this class benefits from the default `shouldComponentUpdate` method provided by PureComponent, which performs a shallow comparison of __props__ and __state__ to determine if a re-render is necessary. In this specific example, since the name state doesn't change during the changeName method, the PureClassComponent won't re-render unnecessarily.
+
+```javascript
+import React, { PureComponent } from "react";
+
+class PureClassComponent extends PureComponent {
+  constructor() {
+    super();
+    this.state = {
+      name: "React JS"
+    };
+  }
+
+  changeName = () => {
+    this.setState({ name: "React JS" });
+  };
+
+  render() {
+    console.log("PureClassComponent -- Render method called");
+    return (
+      <div>
+        <p> Name is : {this.state.name} </p>
+        <button onClick={this.changeName}>Change Name</button>
+      </div>
+    );
+  }
+}
+
+export default PureClassComponent;
+
+```
+
+
+
+##### React.memo
+`React.memo` is nothing but a Higher Order Component (HOC). `React.memo` is similar to React.PureComponent and it is for functional component instead of class component. You can wrap your functional component when component renders same output with same props passed. Due to this it will improve the performance and optimize the rendering.
+
+`React.memo` only works when props of components changes. It means that if you are using state using useState hook in functional component then for every state change it will render the component. Similar to `React.PureComponent` it is doing shallow comparison of props.
+
+`React.memo` takes a first argument as component and returns a special kind of React component.
+
+```Javascript 
+import React, { memo } from "react";
+
+const CustomLabel = ({ name = "Default Name" }) => {
+  return (
+    <>
+      {console.log("CustomLabel component render")}
+      <label>
+        <b>{name}</b>
+      </label>
+    </>
+  );
+};
+
+export default memo(CustomLabel);
+
+```
 </details>
 
 ---
@@ -1761,86 +1849,3 @@ export default App
 
 ---
 
-<details>
-<summary> Pure Component </summary>
-
-##### Pure Function
-In Javascript, when functions returns same output when same input is passed is called Pure functions. It is like returning same data for same input. So in pure function output only depend on its input arguments. Pure functions does not produced any side effects as well.
-
-```javascript
-function Add(num1, num2){
-  return num1 + num2;
-}
-
-let output = Add(1,2);
-console.log(output);  // 3
-```
-
-##### Pure Component
-We know that in React we can create a component in two different ways i.e one is Class component/ Stateful component and another is Functional component/Stateless component. A React component can be considered pure if it renders the same output for the same state and props.
-
-We can convert component to pure component as below:
-
-* For __class components__ react provides `React.PureComponent` base class.
-* For __Functional component__ react provides `React.memo` HOC (Higher Order Component).
-
-##### React.PureComponent
-Now, by extending `PureComponent` instead of `Component`, this class benefits from the default shouldComponentUpdate method provided by PureComponent, which performs a shallow comparison of __props__ and __state__ to determine if a re-render is necessary. In this specific example, since the name state doesn't change during the changeName method, the PureClassComponent won't re-render unnecessarily.
-
-```javascript
-import React, { PureComponent } from "react";
-
-class PureClassComponent extends PureComponent {
-  constructor() {
-    super();
-    this.state = {
-      name: "React JS"
-    };
-  }
-
-  changeName = () => {
-    this.setState({ name: "React JS" });
-  };
-
-  render() {
-    console.log("PureClassComponent -- Render method called");
-    return (
-      <div>
-        <p> Name is : {this.state.name} </p>
-        <button onClick={this.changeName}>Change Name</button>
-      </div>
-    );
-  }
-}
-
-export default PureClassComponent;
-
-```
-
-
-
-##### React.memo
-`React.memo` is nothing but a Higher Order function (HOC). `React.memo` is similar to React.PureComponent and it is for functional component instead of class component. You can wrap your functional component when component renders same output with same props passed. Due to this it will improve the performance and optimize the rendering.
-
-`React.memo` only works when props of components changes. It means that if you are using state using useState hook in functional then for every state change it will render the component. Similar to `React.PureComponent` it is doing shallow comparison of props.
-
-`React.memo` takes a first argument as component and returns a special kind of React component.
-
-```Javascript 
-import React, {memo} from "react";
-
-const CustomLabel=({ name }) => {
-  return (
-    <>
-      {console.log("CustomLabel component render")}
-      <label>
-        <b>{name}</b>
-      </label>
-    </>
-  );
-};
-export default memo(CustomLabel);
-```
-</details>
-
----
