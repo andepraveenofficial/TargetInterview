@@ -24,7 +24,6 @@
 * OOPs
 * General
 * Standard Library
-* Built-In Functions
 </details>
 
 ---
@@ -35,7 +34,7 @@
 ### Introduction
 
 ##### Python
-Python is an object-oriented programming language. 
+Python is an object-oriented programming language.  
 we can create programs with minimal amount of code compare to the other programming languages like C++, Java. 
 
 ```Python 
@@ -50,7 +49,7 @@ print("Hello World")
    - ...etc.
 
 * __Features of Python__ :
-   - Easy to learn & code
+   - Easy to Learn & Code
    - Open Source Programming Language
    - Object-Oriented Language
    - Dynamic Typed Language
@@ -61,9 +60,11 @@ print("Hello World")
    - It means uppercase letters and lowercase letters are different in Python.
    - Example : The __username__, __UserName__, and __userName__ are three different variables.
 
-##### Comment
 
-##### Comments
+##### Comment
+A __Comment__ is not executed.
+Understanding the code easily after a long-term.
+
 
 ```Python 
 # Single Line Comment
@@ -80,27 +81,27 @@ Multiline Comment
 
 ```
 
-
 ##### Output
 ```Python 
-# print function => This is used for print the output
+# print function => This is used to print the output
 print("Hello World")   # Hello World
 ```
 
 ##### Input
 ```Python 
-# input function => This is used for take input from the user
+# input function => This is used to take input from the user
+
 # user input always a string datatype
 user_input = input()   # Hello World
 
-# print function => This is used for print the output
+# print function => This is used to print the output
 print(user_input)   # Hello World
 ```
 
 ##### Dynamically Typed
-* __Python__ is a dynamically typed language, which means there is no need to declare the type of a variable when you create it. Python itself checks and identifies the type of a variable based on the value it is assigned.
+* __Python__ is a dynamically typed language, which means there is no need to declare the type of a variable when we create it. Python itself checks and identifies the type of a variable based on the assigned value.
 
-* While programming languages like C, C++, Java, , ...etc are statically typed languages which means we must declare the type of the variable.we cannot change the data type of a variable during the execution of the program.
+* Other programming languages like `C`, `C++`, `Java`, ...etc are statically typed languages which means we must declare the type of the variable. we cannot change the data type of a variable during the execution of the program.
 
 ```Python 
 x = 6
@@ -129,13 +130,14 @@ Python supports various data types:
 4. Boolean
 5. None
 
-* we can assign a value to the variable with the help of assignment Operator( = ).
+* we can assign a value to the variable with the help of assignment Operator( `=` ).
 
 ```Python 
 my_variable = 10
 ```
 
 values in the variables can be re-assigned.
+
 ```Python 
 my_variable = 10
 print(my_variable)  # 10
@@ -153,7 +155,7 @@ print(my_variable)  # Ten
 
 ### Datatypes
 The datatype determines how the data can be used in the program.  
-For example, mathematical operations can be done on Integer and Float types of data.
+* For example, mathematical operations can be done on Integer and Float types of data.
 1. String
 2. Integer 
 3. Float
@@ -172,12 +174,12 @@ A String is a stream of characters enclosed within quotes.
 
 ```Python 
 my_string1 = "Hello World"
-my_string2 ="some@example.com"
+my_string2 ='some@example.com'
 my_string3 ="1234"
 ```
 
 ##### Integer
-All whole numbers(positive, negative and zero) without any fractional part come under Integer datatype.  
+Any number without a decimal point is called Integer datatype.  
 
 `-3, -2, -1, 0, 1, 2, 3`
 
@@ -191,7 +193,7 @@ If we have Only 2 possible options to select either `True` or `False`.
 python considered `True` and `False` are boolean values.
 
 ##### None
-It is used to no value or nothing.
+It is used to __no value__ or __nothing__.
 
 ```Python 
 my_variable = None
@@ -230,8 +232,8 @@ print("Sum: " + str(result))  # Sum: 5
 
 ##### Mutable vs Immutable
 *  Immutable Data Types
-  - values Cannot be modified after creation.		
-  - Examples: `str`, `int`, `float`, `tuple`	
+   - values Cannot be modified after creation.		
+   - Examples: `str`, `int`, `float`, `tuple`	
   
 * Mutable Data Types
    - values Can be modified after creation also.
@@ -243,28 +245,40 @@ The scope of a variable is the region in which that variable can be accessed.
 2. Global Variable
 
 ##### Local Variable 
-If a variable is declared inside of a function or conditional statement then that type of variable is called Local Variable. 
+If a variable is declared inside of a function then that type of variable is called Local Variable. 
 
 we can access these Local Variables only within that particular block of code.
 
-If the value of the local variable is modified in one function, then the changes are not reflected in another function.
+If the value of the local variable is modified in one function, then that changes are not reflected in another function.
 
 we can convert a local variable to a global variable by using `global` keyword before the variable.
 
 ```Python 
-if True:
-   global my_variable
-   my_variable = "Local Variable"
+def my_function():
+    global my_variable
+    my_variable = 10
 
-print(my_variable)  # Local Variable
+# Call the function to set the value of my_variable
+my_function()
+
+# Now, you can print my_variable
+print(my_variable)  # 10
+
 ```
 
 ##### Global Variables
-If a variable is declared outside of all functions and conditional statements then that variable is called Global variable.
+If a variable is declared outside a function then that variable is called Global variable.
 
 These Global Variables can be accessed at any part of the code including Functions also.
 
-If the value of the global variable is modified inside a function or conditional statement then the changes are reflected in the rest of the program.
+If the value of the global variable is modified inside a functionthen that changes are reflected in the rest of the program.
+
+```Python 
+
+global_variable = 10
+print(global_variable)  # 10
+
+```
 </details>
 
 ---
@@ -273,7 +287,7 @@ If the value of the global variable is modified inside a function or conditional
 <summary>String</summary>
 
 ### String 
-A String is a stream of characters enclosed within quotes.
+A __String__ is a stream of characters enclosed within quotes.
 
 ##### String Methods
 * Verification
@@ -300,7 +314,8 @@ A String is a stream of characters enclosed within quotes.
 
 ##### __Verification__
 ##### isdigit()
-Give `True` if all the characters are digits. Otherwise, False.
+Give `True` if all the characters in the string are digits. Otherwise, `False`.
+
 ```Python 
 is_digit = "123".isdigit()
 print(is_digit)  # True
@@ -311,6 +326,7 @@ print(is_digit)  # False
 
 ##### islower()
 Gives `True` if all letters in the string are in lowercase. Otherwise, `False` (If there is any uppercase letter).
+
 ```Python 
 is_lower = "hello praveen@".islower()
 print(is_lower)  # True
@@ -320,7 +336,7 @@ print(is_lower)  # False
 ```
 
 ##### isupper()
-Gives `True` if all letters in the string are in uppercase. Otherwise, `False` (If there is any uppercase letter).
+Gives `True` if all letters in the string are in uppercase. Otherwise, `False` (If there is any lowercase letter).
 
 ```Python 
 is_upper = "HELLO PRAVEEN!".isupper()
@@ -331,7 +347,7 @@ print(is_upper)  # False
 ```
 
 ##### isalpha()
-Gives `True` if all the characters are only alphabets. Otherwise, `False`.
+Gives `True` if all the characters in the string are only alphabet. Otherwise, `False` (lowercase or uppercase).
 
 ```Python 
 is_alpha = "Praveen".isalpha()
@@ -376,7 +392,7 @@ print(is_gmail)  # True
 ##### __Conversion__
 
 ##### lower()
-Gives a new string by converting each character of the given string to lowercase.
+Gives a new string by converting each letter of the given string to __lowercase__.
 
 ```Python 
 name = "Ande Praveen"
@@ -389,7 +405,7 @@ print(lower_name)  # ande praveen@1
 ```
 
 ##### upper()
-Gives a new string by converting each character of the given string to uppercase.
+Gives a new string by converting each letter of the given string to __uppercase__.
 
 ```Python 
 name = "Ande Praveen"
@@ -489,7 +505,7 @@ word_index = sentence.index("happy")  # 10
 ##### round()
 `round()` Function Rounds the float value to the given number of decimal digits.
 
-`rounded_number = round(number, digits(optional))`
+`rounded_number = round(number, digits)`
 
 digits -> defines the number of decimal digits to be considered for rounding.
 
@@ -524,8 +540,8 @@ print(a)  # 6
    * `==   !=   <   >   <=   >=`
 5. Logical
    * The logical operators are used to perform logical operations on Boolean values. Gives `True` or `False` as a result.
-     - `and` -> All the booleans are true
-     - `or` -> Any one of the booleans is True
+     - `and` -> All the booleans are __True__
+     - `or` -> Any one of the booleans is __True__
      - `not` -> It gives opposite of boolean
 
 ##### BODMAS
@@ -564,7 +580,7 @@ The standard order of evaluating an expression is __BODMAS__ rule.
 * String Format
 
 ##### Concatenation
-Concatenation means Joining. 
+Concatenation means Joining.  
 we can do Concatenation with addition symbol `+`.
 * String Concatenation is possible only with strings. 
 * list concatenation is possible only with lists.
@@ -655,6 +671,15 @@ word = "python"
 is_part = "on" not in word
 print(is_part)  # False
 
+print("----list membership check-------")
+my_list = [1, 2, 3, 4, 5]
+is_part = 5 in my_list
+print(is_part)  # True
+
+my_list = [1, 2, 3, 4, 5]
+is_part = 5 not in my_list
+print(is_part)  # False
+
 print("----tuple membership check-------")
 my_tuple = (1, 2, 3, 4, 5)
 is_part = 5 in my_tuple
@@ -663,15 +688,6 @@ print(is_part)  # True
 print("-------")
 my_tuple = (1, 2, 3, 4, 5)
 is_part = 5 not in my_tuple
-print(is_part)  # False
-
-print("----list membership check-------")
-my_list = [1, 2, 3, 4, 5]
-is_part = 5 in my_list
-print(is_part)  # True
-
-my_list = [1, 2, 3, 4, 5]
-is_part = 5 not in my_list
 print(is_part)  # False
 
 ```
@@ -699,22 +715,8 @@ print(message)  # my name is praveen and my age is 26.
 ##### Packing & Unpacking
 
 ```Python 
+
 # Packing & Unpacking
-
-"""
-unpacking :
-values of any sequence can be directly assigned to variables.
-number of variables in the left should match the length of sequence.
-"""
-
-my_tuple = ("R", "e", "d")
-print(my_tuple)  # ('R', 'e', 'd')
-
-# we must match the number of variable to number of items in sequence.
-variable_1, variable_2, variable_3, = my_tuple
-print(variable_1)  # R
-print(variable_2)  # e
-print(variable_3)  # d
 
 """
 packing : 
@@ -731,6 +733,22 @@ print(type(a))  # <class 'tuple'>
 a, = 1,
 print(a)  # 1
 print(type(a))  # <class 'int'>
+
+
+"""
+unpacking :
+values of any sequence can be directly assigned to variables.
+number of variables in the left should match the length of sequence.
+"""
+
+my_tuple = ("R", "e", "d")
+print(my_tuple)  # ('R', 'e', 'd')
+
+# we must match the number of variable to number of items in sequence.
+variable_1, variable_2, variable_3, = my_tuple
+print(variable_1)  # R
+print(variable_2)  # e
+print(variable_3)  # d
 
 ```
 
@@ -848,9 +866,9 @@ print("snake_case")  # snake_case
 <summary>Functions</summary>
 
 ### Functions
-A function is a block of reusable code to perform a specific action. Functions help us in using existing code without writing it every time we need it. A Function is executed when calls it.
+A __Function__ is a block of reusable code to perform a specific action. Functions help us in using existing code without writing it every time when we need it. A Function is executed when calls it.
 
-We can use the same code many times with different arguments, to produce different results (We can reuse code).
+We can use the same code many times with different arguments, to produce different results.
 
 A function can be defined using a keyword `def`. A function is uniquely identified by the function_name.
 
@@ -866,7 +884,7 @@ greet()  # Hello
 ```
 
 ##### Function Arguments
-We can pass values to a function using Argument.
+We can pass values to a function using Arguments.
 
 ```Python 
 # Function with Arguments
@@ -943,7 +961,7 @@ print(result)  # 120
 ```
 
 ##### Lambda function 
-A `lambda` function an anonymous function used for doing simple operations. __Lambda__ functions can have any number of arguments, but can only have one expression.
+A `lambda` function is an __anonymous__ function used for doing simple operations. __lambda__ functions can have any number of arguments, but can only have one expression.
 
 The expression is executed and returned when the lambda function is called.
 `lambda arguments: expression`
@@ -1038,14 +1056,18 @@ list methods:
 append() => adds an element to the end of the list.
 extend() => adds all the elements of the sequence to the end of the list.
 insert() => element inserted to the list at specified index.
+
 pop() => removes last element
 remove() => removes the first matching element from the list
 clear() => removes all the items from the list & it gives Empty List
+
 index() => returns the index of first matching element from the list
 count() => returns the number of elements with the specified value
+len() => find number of items
+
 sort() => arrange in ascending order
 sorted() => it creates a new sorted list
-len() => find number of items
+
 join() => The `join()` takes all the items in a sequence of strings and joins them into one string.
 ` 
 ==============
@@ -1106,6 +1128,7 @@ my_list = [1, 2, 3, 2, 5]
 print(my_list)  # [1, 2, 3, 2, 5]
 my_list.remove(2)
 print(my_list)  # [1, 3, 2, 5]
+
 
 
 print("-----clear()-------")
@@ -1210,15 +1233,15 @@ The `join()` takes all the items in a sequence of strings and joins them into on
 `sentence = "joiner".join(sequence)`
 
 ```Python 
-list_a = ['Python is ', ' progr', 'mming l', 'ngu', 'ge']
-string_a = "a".join(list_a)
+list_a = ['Python', 'is', 'a', 'programming', 'language']
+string_a = " ".join(list_a)
 print(string_a)  # Python is a programming language
 ```
 
 ##### reverse a List
 Reversing a list using `reverse()` method
 
-The reverse() method can be used to reverse a List. It updates the original list.
+The `reverse()` method can be used to reverse a List. It updates the original list.
 
 ```Python 
 week_days = ['Monday', 'Tuesday', 'Wednesday']
@@ -1237,6 +1260,17 @@ list.remove(2)
 print(list) # [1,3,2]
 ```
 
+
+```Python 
+# remove all 2's
+my_list = [1, 2, 3, 2, 5]
+
+while 2 in my_list:
+    my_list.remove(2)
+
+print(my_list)  # [1,3,5]
+```
+
 ##### del 
 we can delete a variable.  
 `del` is a statement that is used to delete an item at a specific index from a list. If the specified index does not exist, it raises an IndexError. 
@@ -1251,7 +1285,7 @@ del my_list
 It is recommended to use `remove` when you want to remove an item by its value and `del` when you want to remove an item by its index.
 
 ##### Shallow Copy
-A shallow copy creates a new object which stores the reference of the original elements.
+A shallow `copy` creates a new object which stores the reference of the original elements.
 
 ```Python 
 
@@ -1269,15 +1303,15 @@ shallow_copy = list(original_list)
 ```
 
 ##### Deep Copy
-A deep copy creates a new object and recursively adds the copies of nested objects present in the original elements. 
+A `deepcopy` creates a new object and recursively adds the copies of nested objects present in the original elements. 
 
 ```Python 
-import copy
+from copy import copy, deepcopy
 
 original_list = [1, [2, 3], 4]
 
-shallow_copy = copy.copy(original_list)
-deep_copy = copy.deepcopy(original_list)
+shallow_copy = copy(original_list)
+deep_copy = deepcopy(original_list)
 
 # Modify the shallow copy
 shallow_copy[0] = 100
@@ -1373,7 +1407,7 @@ print("==================")
 ### Sets 
 Sets are the unordered collection of items.  
 * Sets contain unique elements (no duplicates)
-* Set is immutable data structure.
+* Set is mutable data structure.
 
 ##### Creating a Set
 - Created by enclosing elements within {curly} brackets.
@@ -1472,6 +1506,7 @@ print("=========== set methods ==========")
 add()
 update()
 discard()
+remove()
 '''
 
 print("---adding items------")
@@ -1531,7 +1566,6 @@ is_part = 3 in my_set
 print(is_part)  # True
 is_part = 8 in my_set
 print(is_part)  # False
-
 
 ```
 
@@ -1594,7 +1628,7 @@ difference_set = set_a - set_b
 print(difference_set)  # {1, 2}
 
 print("-----difference()--------")
-# difference() converts sequence to a set, and performs the union.
+# difference() converts sequence to a set, and performs the difference.
 set_a = {1, 2, 3, 4}
 set_b = [3, 4, 5, 6]
 difference_set = set_a.difference(set_b)
@@ -1612,7 +1646,7 @@ symmetric_difference_set = set_a ^ set_b
 print(symmetric_difference_set)  # {1, 2, 5, 6}
 
 print("-----symmetric_difference()--------")
-# symmetric_difference() converts sequence to a set, and performs the union.
+# symmetric_difference() converts sequence to a set, and performs the symmetric_difference.
 set_a = {1, 2, 3, 4}
 set_b = [3, 4, 5, 6]
 symmetric_difference_set = set_a.symmetric_difference(set_b)
@@ -1666,10 +1700,10 @@ print("=================")
 ---
 
 <details>
-<summary>Dictionaries</summary>
+<summary>Dictionary</summary>
 
-### Dictionaries
-A Dictionary is an unordered collection of items. Every dictionary item is a Key-Value pair.  
+### Dictionary
+A Dictionary is an unordered collection of items. Every dictionary item is a __Key-Value__ pair.  
 
 ##### create a Dictionary:  
 * A dictionary is created by enclosing items within {curly} brackets.
@@ -1789,7 +1823,7 @@ print("------dictionary methods---------")
 
 print("-----keys------")
 # my_dictionary.keys()
-# keys() method returns a view object of the type dict_keys that holds a list of all keys
+# keys() method returns a view object that displays a list of all the keys in the dictionary.
 my_dictionary = {"name": "praveen",
                  "age": 26,
                  "gmail": "praveenande84@gmail.com"}
@@ -1866,10 +1900,10 @@ print(my_dictionary)  # {'name': 'praveen', 'age': 26, 'gmail': 'praveenande84@g
 print(type(my_dictionary))  # <class 'dict'>
 
 
-print("--------dictionary keys must be----")
+print("--------dictionary keys must be mutable----")
+# string => "name"
 # integer => 26
 # float => 3.14
-# string => "name"
 # tuple => (1, 2)
 
 
@@ -1925,12 +1959,12 @@ print("----iterating-------")
 my_dictionary = {"name": "praveen",
                  "age": 26,
                  "gmail": "praveenande84@gmail.com"}
-
 print(my_dictionary)  # {'name': 'praveen', 'age': 26, 'gmail': 'praveenande84@gmail.com'}
+
 for key in my_dictionary.keys():
     if key == "name":
-        pass
         #  del my_dictionary[key]
+        pass
 print(my_dictionary)  # {'name': 'praveen', 'age': 26, 'gmail': 'praveenande84@gmail.com'}
 
 print("===================")
@@ -2051,7 +2085,7 @@ print("End")
 End
 ```
 
-An infinite loop occurs when the condition always evaluates to True i.e. incorrect termination condition.
+An infinite loop occurs when the condition always evaluates to `True` i.e. incorrect termination condition.
 
 ```Python  
 a = 10
@@ -2061,7 +2095,7 @@ while a > 3:
 ```
 
 ##### do-while loop in python
-In Python, we can create a do-while loop by using the while loop to achieve similar behavior.
+In Python, we can create a __do-while__ loop by using the while loop to achieve similar behavior.
 
 ```Python 
 i = 1
@@ -2074,7 +2108,7 @@ while True:
 ```
 
 ##### for Loop
-The `for` loop is used to execute a block of code a known number of times. The `for` statement iterates over each item of a sequence.
+The `for` statement iterates over each item of a sequence, then execute a block of code.
 
 ![for Loop](./Assets/03_looping_statements/for.jpg)
 
@@ -2121,8 +2155,10 @@ Outer: 1
 ##### break statement
 break statement gets executed and stops the execution of the loop further.
 
-![Break Statement](./Assets/03_looping_statements/break1.jpg)
-Generally, break is used to exit a loop when a condition is satisfied.
+![Break Statement](./Assets/03_looping_statements/break1.jpg)  
+
+Generally, `break` is used to exit a loop when a condition is satisfied.
+
 ![Break Statement](./Assets/03_looping_statements/break2.jpg)
 
 ```Python  
@@ -2142,7 +2178,9 @@ END
 
 ##### continue
 The `continue` statement makes the program skip the remaining statements in the current iteration and begin the next iteration.
+
 ![Continue Statement](./Assets/03_looping_statements/continue1.jpg)
+
 Generally, continue is used to skip the remaining statements in the current iteration when a condition is satisfied.
 
 ![Continue Statement](./Assets/03_looping_statements/continue2.jpg)
@@ -2160,7 +2198,9 @@ print("END")
 Generally it used when we have to test the code before writing the complete code. When it is executed, nothing happens.  
 
 pass is used to create empty loops or empty conditional statements.
+
 ![pass statemen](./Assets/03_looping_statements/pass1.jpg)  
+
 ![pass statement](./Assets/03_looping_statements/pass2.jpg)
 
 ```Python 
@@ -2191,7 +2231,7 @@ for counter in range(5):
 * all
 * any
 * enumarate
-* unicode
+* ord() => unicode
 * chr
 
 
@@ -2225,7 +2265,7 @@ Rounds the float value to the given number of decimal digits.
 # round
 
 """
-round(number, digits(optional))  Rounds the float value to the given number of decimal digits.
+round(number, digits)  Rounds the float value to the given number of decimal digits.
 digits -> define the number of decimal digits to be considered for rounding.
 when not specified default is 0.
 """
@@ -2362,7 +2402,7 @@ print(incremental_order)  # [1, 2, 5, 6, 7]
 print("----------------------")
 
 """
-ordering list items in decremental
+ordering list items in decremental order
 sorted(sequence, reverse=True)
 Decending Order
 """
@@ -2388,6 +2428,7 @@ for number in range(3):
 2
 ```
 
+
 ```Python 
 
 # Generates a sequence of numbers starting from start to end (end is not included).
@@ -2411,7 +2452,6 @@ print(list(reversed_name))  # ['a', 'j', 'e', 'T']
 ```
 
 ##### all()
-
 The `all()` function returns `True` if all the items in the sequence are true (or if the sequence is empty). Otherwise, it returns `False` .
 For each item in a sequence, the `all()` function evaluates to false, for which the bool() function returns `False` . 
 
@@ -2422,7 +2462,7 @@ print(is_all_true)  # True
 ```
 
 ##### any()
-The `any()` function returns True if any of the items in the sequence is `True`. Otherwise, it returns `False`.
+The `any()` function returns `True` if any one of the items in the sequence is `True`. Otherwise, it returns `False`.
 
 ```Python 
 list_a = [True, False]
@@ -2434,7 +2474,7 @@ print(is_any_true)  # True
 The `enumerate()` function adds a counter to each item in a sequence and returns a sequence containing
 tuples.
 `enumerate(sequence, start)`
-* sequence : is any sequence like a string, list, tuple, etc.
+* sequence :It is any sequence like a string, list, tuple, etc.
 * start (Optional): it indicates the start point of the counter. Its default value is 0 .
 
 ```Python 
@@ -2452,8 +2492,8 @@ print(enumerate_set)  # [(10, 1), (11, 2), (12, 3), (13, 4)]
 
 ```Python 
 names = ["Jack", "John", "James"]
-for each_name in enumerate(names):
- print(each_name)
+for index, each_name in enumerate(names):
+ print(index, each_name)
 
 ```
 
@@ -2484,7 +2524,7 @@ print("------chr(unicode)--------")
 print(chr(65))  # A
 
 print("------comparing strings------")
-# In Python, strings are compared considering unicode.
+# In Python, strings are compared considering unicode values.
 print("A" < "B")  # True
 
 # In Python, String Comparison is done character by character.
@@ -2494,7 +2534,6 @@ print("98" < "984")  # True
 
 </details>
 
-
 ---
 
 <details>
@@ -2502,8 +2541,8 @@ print("98" < "984")  # True
 
 ### OOPS
 `OOPs : Object-Oriented Program`  
-Object-Oriented Programming is a way of approaching, designing and developing software.
-Proper usage of OOPs concepts helps us build well-organized systems that are easy to use and extend.
+__Object-Oriented Programming__ is a way of approaching, designing and developing software.
+Proper usage of __OOPs__ concepts helps us build well-organized systems that are easy to use and extend.
 
 ##### The advantages of OOPs
 * Easier way to analyse
@@ -2518,11 +2557,11 @@ The principles of OOPs involve,
 * Polymorphism
 
 ##### Inheritance
-A Sub/Derived/Child Class inherits attributes and methods from Super/Base/Parent Class is called Inheritance.
+A Child Class inherits attributes and methods from Parent Class is called Inheritance.
 
 ```Python 
 # Parent class (Superclass)
-class Animal:
+class Animal():
     def __init__(self, name):
         self.name = name
 
@@ -2601,6 +2640,7 @@ employee = Employee("Alice", "E12345", 50000)
 
 # Access public members and methods
 print("Employee Information:")
+print(employee.name)
 employee.display_info()
 
 # Modify and retrieve the salary using public methods
@@ -2623,8 +2663,13 @@ print("Updated Department:", manager.department)
 
 ```
 
+##### Abstraction 
+In python, Abstraction is defined as a process of handling complexity by hiding unnecessary information from the user.  
+
+__For example__ :  When we use the TV remote to increase the volume. We don't know how pressing a key increases the volume of the TV.
+
 ##### Polymorphism
-Polymorphism contains two words "poly" and "morphs". Poly means many, and morph means shape. By polymorphism, we understand that one task can be performed in different ways.
+Polymorphism contains two words __poly__ and __morphs__. Poly means many, and morph means shape. By polymorphism, we understand that one task can be performed in different ways.
 The word polymorphism means having many forms. 
 
 ![Polymorphism](./Assets/05_OPPs/polymorphism.jpg)
@@ -2654,11 +2699,6 @@ print(animal_sound(cat))  # Calls Cat's make_sound method
 
 ```
 
-##### Abstraction 
-In python, Abstraction is defined as a process of handling complexity by hiding unnecessary information from the user. This is one of the core concepts of object-oriented programming (OOP) languages.  
-
-For example :  When we use the TV remote to increase the volume. We don't know how pressing a key increases the volume of the TV.
-
 ##### Classes
 A class is a prototype from which objects are created. Classes can be used to bundle related attributes and methods. An instance of a class is an Object.  
 A class in Python is defined using the `class` keyword, followed by the class name and a colon. Inside the class, attributes and methods can be defined to represent properties and behaviors of the class.
@@ -2670,8 +2710,8 @@ class Mobile:
         self.storage = storage
 
 
-obj = Mobile("iPhone 12 Pro", "128GB")
-print(obj.model)  # iPhone 12 Pro
+obj = Mobile("iPhone 15 Pro", "128GB")
+print(obj.model)  # iPhone 15 Pro
 ```
 
 ```Python 
@@ -2716,7 +2756,7 @@ class Mobile:
         self.model = model
         self.camera = camera
     def make_call(self, number):
-        print("calling..{}".format(number))
+        print(f"calling..{number}")
 
 mobile = Mobile("Nikon", "D850")
 mobile.make_call("12345")
@@ -2798,7 +2838,6 @@ Warranty 10 mont
 In the above example, the display_product_details() method in the ElectronicItem class overrides the display_product_details() method of the Product class.
 
 ##### Decorators in python?
-
 In Python, decorators are a flexible way to modify or extend the behavior of functions or methods without changing their code. Decorators let us add extra stuff to functions.
 
 ##### class methods
@@ -2891,7 +2930,7 @@ except:
 
 ##### How much do you rate yourself in Python?
 
-I'd rate myself 6 out of 10 in Python. I have grasped fundamental concepts such as variables, data types, and data structures, including lists, tuples, sets, and dictionaries, along with a few concepts from object-oriented programming (OOP). 
+I'd rate myself 7 out of 10 in Python. I have grasped fundamental concepts such as variables, data types, and data structures, including lists, tuples, sets, and dictionaries, along with a few concepts from object-oriented programming (OOP). 
 
 I have improved my problem-solving skills through consistent practice and solving numerous problems. Currently, I am focusing on further developing these skills by working with various libraries such as Pandas and NumPy.
 

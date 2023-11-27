@@ -1,0 +1,12 @@
+General Problems:
+-----------------
+01 Prime Number
+02 Palindrome
+03 Duplicate Items
+04 X pattern
+05 Reverse List
+06 Factorial
+07 Armstrong Number
+08 Fibonacci Series
+09 Swap
+10 Sorted List
