@@ -24,7 +24,7 @@
 
 ### List Methods
   * `append()` => adds an element to the end of the list.
-  * `extend()` => adds all the elements of the sequence to the end of the   * list.
+  * `extend()` => adds all the elements of the sequence to the end of the list.
   * `insert()` => element inserted to the list at specified index.
   * `pop()` => removes last element
   * `remove()` => removes the first matching element from the list

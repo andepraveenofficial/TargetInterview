@@ -1696,8 +1696,7 @@ __SPA__ stands for __single page application__
 
 ##### MPA 
 __MPA__ stands for __Multi-page application__
-* In a Multi-page application,
-Every URL is associated with corresponding resources (HTML, CSS, JS).
+* In a Multi-page application, Every URL is associated with corresponding resources (HTML, CSS, JS).
 * The browser downloads these resources when you access them or navigate between URLs.
 
 ##### npm 
