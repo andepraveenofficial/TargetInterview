@@ -12,8 +12,8 @@
 - Scope
 - JS Environment
 - this Keyword
-- Functions
 - Operators
+- Functions
 - Data Structures
 - Asynchronous
 - Datatypes
@@ -28,6 +28,7 @@
 - Object Methods
 - Control Statements
 - Template Literals
+- Code Working
 
 </details>
 
@@ -35,7 +36,6 @@
 
 <details>
 <summary>General</summary>
-
 
 ### General
 
@@ -49,11 +49,12 @@ we can create Dynamic Webpages by combinning HTML & Javascript.
   - Server interaction is less.
   - Immediate response to the users.
 
-##### Is JavaScript typed dynamically?
+##### **Dynamically Typed** language?
 Yes, JavaScript is a dynamically typed language.
 
 * We can declare a variable without specifying the data type.
-* We can change the data type of the variable when it is reassigned
+* Javascript itself check and identify type of a variable based on given value.
+* We can change the data type of the variable when it is reassigned.
 
 #####  Display Javascript Output
 
@@ -81,7 +82,7 @@ window.promt("Hello World");
 
 ##### What is an ECMA Script?
 __ECMA Script__ stands for __European Computer Manufacturers Association Script__.
-
+ECMA Script maintains the rules of a scripting language.  
 It specifies the core features that a scripting language should provide and how those features should be implemented.
 
 ##### Javascript version
@@ -95,7 +96,6 @@ I know ES6 version
 <summary>Variables</summary>
 
 ### Variable
-
 Variables are like containers. we can use these containers to store data during program execution. we can mention a name for identify a particular container. So those named Containers are called variables. we can manipulate the data in the containers by reffering that variable name.
 
 we can store different types of data in the containers. In programming languages, we have some categories in data.
@@ -109,7 +109,7 @@ Javascript supports various data types:
 
 we can assign a value to the variable with the help of assignment Operator( `=` ).
 
-##### __Define a Variable__
+##### Define a Variable
 we can create variables using __Variable Declaration__ keywords .
 In Javascript we can define a variable in 3 ways,
 
@@ -154,12 +154,12 @@ const variable maintain constant values.
 
 
 ##### Local Variable
-If a variable is created inside a block, that type of variable is called Local Variable.  
+If a variable is created inside function, that type of variable is called Local Variable.  
 
 * __Example__ :  
 If a variable is declared inside a function, When a function is called, its local variables are created, and when the function finishes it's executing, automatically those local variables are destroyed.  
 
-Local variables are useful for temporary data storage within Block that should not interfere with other parts of the program. The Local Variable memory is created in the the Local Scope.
+Local variables are useful for temporary data storage within a Block, and they should not interfere with other parts of the program. The Local Variable memory is created in the the Local Scope.  
 we can access these Local Variables only within that particular block of code.
 
 ##### Global Variable
@@ -184,7 +184,7 @@ we can't access the variables, when Variable in __TDZ__
   // myVar TDZ starts here (at the beginning of this block's local scope)
   // myVar TDZ continues here
   // myVar TDZ continues here
-  console.log(myVar); // returns ReferenceError because myVar continues here
+  console.log(myVar); // returns ReferenceError // because myVar continues here
   // myVar TDZ continues here
   // myVar TDZ continues here
   let myVar = "Vegetable Fried Rice"; // bestFood's TDZ ends here
@@ -195,13 +195,13 @@ we can't access the variables, when Variable in __TDZ__
 
 #### Errors
 Errors are 2 types:
-1. syntaxError
+1. syntax Error
 2. Runtime Error
 
 ##### SyntaxError
  * Missing initializer in const declaration because it is a constant type already mentioned and declared.  
  * Identifier 'a' has already been declared.  
- * If we are not folloing rules of language, then we got syntax error.
+ * If we are not following rules of language, then we got syntax error.
 
 ##### Runtime Error
 *  __ReferenceError__
@@ -243,14 +243,14 @@ Each Block has it's own Lexical scope.
 // single statement, so we dont't use block.
 if (true) console.log("Hello world");
 
-// here we are using multiple statements, so we use block.
+// Here we are using multiple statements, so we use block.
 if (true){
     var a = 10;
     console.log(a);
 }
 ```
-##### Closure
 
+##### Closure
 A **Closure** is a combination of a __function__ and its __lexical scope__ bundle together forms a Closure.
 
 A closure gives the outer function's scope access to an inner function that means it can be used the varaibles and functions of its parent environment.
@@ -259,6 +259,7 @@ A closure gives the outer function's scope access to an inner function that mean
 
 ##### Lexical Environment
 Its Parent Memory
+
 ##### Uses of Closures
 * Timer Functions
 * Events
@@ -270,7 +271,7 @@ Its Parent Memory
   * Freeze browser
 
 ##### Garbage Collector
-Garbage collector is like program in the browser of the javascript engine.
+Garbage collector is like a program in the browser of the javascript engine.
 
 In JavaScript, the garbage collector automatically __identifies__ and __removes__ unreferenced objects, freeing up memory to improve performance and prevent memory leaks in the application.
 
@@ -316,7 +317,6 @@ Execution Context contains two components.
 `Execution Context => Memory Component + code Component`
 
 `Execution Context => Creation Phase + Execution Phase`
-
 
 ##### Phases of Execution Context
 
@@ -379,7 +379,7 @@ If it is a Function Declaraion, It will be stored entire function.
 Any code write in javascript which is not inside a  function is called global space.
 
 ### window:
-window object is created by javascript engine.
+__window__ object is created by javascript engine.
 In window object we have lot of variables, methods and functions.
 window object is a global object because it is created in the global space.
 at the global level the window object is equal to __this__ object.
@@ -393,7 +393,7 @@ In JavaScript, __this__ keyword always refers to an object.
  
   `Function Declaration : Where the function called.`
 
-* Arrow Functions can't create its own Execution context, but it takes from Lexical environment. So Arrow Function, They inherit the __this__ object from their surrounding context.  
+* Arrow Functions can't create its own Execution context, but it takes from Lexical Environment. So Arrow Function, They inherit the __this__ object from their surrounding context.  
  
   `Arrow Function : Where the Function Declared.`
 
@@ -456,7 +456,7 @@ we can manipulate the __this__ object with below methods.
 * bind
 
 ###### call  
-With __call__ we can invoke a method passing an owner object as an argument.
+With __call__  method, we can invoke a method passing an owner object as an argument.
 
 ```Javascript 
 // Define the first person object
@@ -497,7 +497,7 @@ console.log(fullName); // Brenden Eich
 1. Assignment
    * `=`
 2. Arithmetic
-   * `+ - * /`
+   * `+ - * / %`
 3. Shorthand Math
    * `+=   -=  *=   /=`
 4. Unary
@@ -510,7 +510,7 @@ console.log(fullName); // Brenden Eich
    * `...` three dots
    * spread operator used to unpack the items in an Object or Array into individual elements.
 8.  Rest
-   * we can pack multiple values into an array.
+    * we can pack multiple values into an array.
 9.  Ternary
     * `let variable = condition ? if-block : else-block;`
 
@@ -641,7 +641,6 @@ a();
 
 // These anonymous functions are used at where functions used as values.
 
-
 ```
 
 ```javascript
@@ -730,7 +729,7 @@ In javascript, we have built-in Data structures like,
 ### Asynchronous  
 Javascript cannot wait for anyone.
 
-Some Javascript tasks may take time to complete, such as  
+Some __Javascript tasks__ may take time to complete, such as  
 * fetch -> fetching data from External database,  
 * timer -> perform tasks with timer
 * Events -> responding to user input.
@@ -789,7 +788,7 @@ promise
 ##### Event Loop
 Event Loop continuosly monitoring whether callstack is empty or not.  
 if callstack is empty then checks the Microtask Queue & callback Queue. 
-if there is any Microtask functions or callback functions , it automatically push it into the callstack thn delete from queue.  
+if there is any Microtask functions or callback functions , it automatically push it into the callstack then delete from queue.  
 
 Here Microtask Queue has more priority than the Callback Queue.
 
@@ -802,7 +801,7 @@ Here Microtask Queue has more priority than the Callback Queue.
 
 ##### Datatypes
 The Datatype determines how the value or data can be used in the program.  
-For example, mathematical operations can be done on Integer and Float type of data.  
+For example, mathematical operations can be done on Integer and Float types of data.  
 The `typeof()` operator is used to find the type of value.
 
 1. __Primitive Datatypes__  
@@ -822,6 +821,7 @@ Primitives are immutable.  Primitives are passed by value.
    - NaN
 
 ##### undefined
+`var declaration keyword`
 * If a variable is already declared, but value is not assigned to that variable, then it takes `undefined` as its value.
 * variable is defined but It is using before Initialization.  
 * The datatype of `undefined` is `undefined` itself.
@@ -913,7 +913,7 @@ console.log(list_a)  // [5, "Six", a, 8.2]
 * Adding
   -  `myArray.push(lastItem);`
   -  `myArray.unshift(firstItem);`
-  -  `myArray.splice(start, deleteCount, item1, item2...);`
+  -  `myArray.splice(startIndex, deleteCount, item1, item2...);`
 * Removing
   - `let lastItem = myArray.pop();`
   - `let firstItem = myArray.shift();`
@@ -931,7 +931,8 @@ These Methods are Iterate over each item of the Array and do some operations.
 
 * __map__ 
   -  `let newArray = myArray.map((currentValue, index, arr) => callback);`
-  - Here index and arr are optional arguments.
+  - Here __index__ and __arr__ are optional arguments.
+  - 
  ```Javascript 
 const myArray = [1, 2, 3, 4];
 const output = myArray.map((eachItem) => eachItem * eachItem);
@@ -940,7 +941,7 @@ const output = myArray.map((eachItem) => eachItem * eachItem);
 
 * __filter__
   -  `let newArray = myArray.filter((currentValue, index, arr) => callback)`;
-  - Here index and arr are optional arguments.
+  - Here __index__ and __arr__ are optional arguments.
   
   ```Javascript 
   const myArray = [1,2,3,4,-5,-7,12];
@@ -950,7 +951,7 @@ const output = myArray.map((eachItem) => eachItem * eachItem);
 
 * __reduce__
 -  `let finalValue = myArray.reduce((accumulator, currentValue, index, arr) => callback);`
-  - Here accumulator is the initialValue(0) or the previously returned value of the function and currentValue is the value of the current element, index and arr are optional arguments.
+  - Here accumulator is the initialValue(0) or the previously returned value of the function and currentValue is the value of the current element, __index__ and __arr__ are optional arguments.
    
   ```Javascript 
      const myArray = [1,2,3,4];
@@ -960,7 +961,7 @@ const output = myArray.map((eachItem) => eachItem * eachItem);
 
 * __forEach__ 
   -  myArray.forEach((currentValue, index, arr) => callback);
-  - Here index and arr are optional arguments.
+  - Here __index__ and __arr__ are optional arguments.
 ```Javascript 
 const myArray = [1, 2, 3, 4];
 
@@ -1004,7 +1005,7 @@ console.log(reversedArray);  // [ 5, 4, 3, 2, 1 ]
 ```
 
 * __flat__
-- The flat() method creates a new array with all sub-array elements concatenated into it recursively up to the specified depth.
+- The `flat()` method creates a new array with all sub-array elements concatenated into it recursively up to the specified depth.
 - `let newArray = myArray.flat(depth);`
 
 
@@ -1027,7 +1028,7 @@ console.log(flatArray);  // [ 1, 2, 3, 4, 5 ]
 
 ##### Object Destructuring
 we can make object key to a variable.  
-To unpack properties from Objects, we use Object Destructuring. The variable name should match with the key of an object.  
+To unpack properties from Object, we use Object Destructuring. The variable name should match with the key of an object.  
 
 ```javascript
 let person = {
@@ -1049,21 +1050,24 @@ console.log(age); // Output: 28
 <summary>DOM</summary>
 
 #### DOM 
-Document Object Model (DOM) is the structured representation of the HTML document created by the browser.  
+__DOM__ stands for __Document Object Model__ .  
+DOM is the structured representation of the HTML document created by the browser.  
 It allows Javascript to manipulate, structure and style of our website.
 
 ##### Real DOM
-Real DOM is nothing but DOM. __DOM__ stands for __Document Object Model__. It is a structured representation of the HTML elements that are present in a webpage.
-It represents the entire UI of your application.
+Real DOM is nothing but DOM. It is a structured representation of the HTML elements that are present in a webpage.
+It represents the entire UI of our application.
 
 ##### Access HTML Element
-* getElementById('id'): Returns the element that has the specified id.
+* `getElementById('id')`: Returns the element that has the specified id.
  
-* getElementsByClassName('classname'): Returns all the elements that have the specified class name. It returns an array-like object.
+* `getElementsByClassName('classname')`: Returns all the elements that have the specified class name. It returns an array-like object.
 
-* getElementsByTagName('tagname'): Returns all the elements that have the specified tag name. It returns an array-like object.
+* `getElementsByTagName('tagname')`: Returns all the elements that have the specified tag name. It returns an array-like object.
 
-* querySelector(): Takes CSS style selector as argument and returns the first selected HTML element.
+* `querySelector()`: Takes CSS style selector as argument and returns the first selected HTML element.
+* 
+* `querySelectorAll()` : Takes CSS style selector as argument and returns the all  HTML elements.
 
 ```Javascript 
 // Old Format
@@ -1276,6 +1280,7 @@ class Rectangle {
 console.log(Rectangle.displayName); // Output: Rectangle
 console.log(Rectangle.print()); // Output: Static method print() is called from Rectangle
 
+// create a instance
 let rectangle1 = new Rectangle(10, 8);
 
 console.log(rectangle1.displayName); // Output: undefined

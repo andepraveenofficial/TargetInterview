@@ -4,7 +4,7 @@ This is Insta Share Application.
 It almost like Instagram Clone.
 I created this entire project with React.
 I have spent 7 days for completing this project.
-
+-----------
 For this project I used 
 * Functional Components with React Hooks.
 * Global State management purpose I used React context for Avoiding Prop Drilling.
